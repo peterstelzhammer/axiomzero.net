@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AxiomZero</title>
+<style>
+  :root {
+    --petrol: #0F3A40;
+    --black: #0A0F10;
+    --citron: #D4DE4F;
+    --bone: #ECEAE3;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    display: grid;
+    place-items: center;
+    background: radial-gradient(ellipse at 50% 40%, var(--petrol) 0%, var(--black) 75%);
+    color: var(--bone);
+    font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .mark {
+    font-size: clamp(2.5rem, 9vw, 6rem);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    user-select: none;
+  }
+  .mark .a { font-weight: 800; }
+  .mark .z { font-weight: 300; color: var(--citron); }
+  main { text-align: center; }
+  .domain {
+    margin-top: 1.25rem;
+    font-size: clamp(0.7rem, 1.4vw, 0.85rem);
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: lowercase;
+    color: var(--bone);
+    opacity: 0.45;
+  }
+  .mail {
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-size: clamp(0.7rem, 1.4vw, 0.85rem);
+    letter-spacing: 0.08em;
+    color: var(--citron);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity .2s;
+  }
+  .mail:hover, .mail:focus-visible { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+</style>
+</head>
+<body>
+  <main>
+    <h1 class="mark" aria-label="AxiomZero"><span class="a">Axiom</span><span class="z">Zero</span></h1>
+    <p class="domain">axiomzero.net</p>
+    <a class="mail" id="m" href="#"></a>
+  </main>
+  <script>
+    (function () {
+      var u = "contact", d = "axiomzero" + "." + "net", a = u + "\u0040" + d;
+      var el = document.getElementById("m");
+      el.textContent = a;
+      el.href = "mai" + "lto:" + a;
+    })();
+  </script>
+</body>
+</html>
